@@ -18,7 +18,7 @@ int main() {
     /* 
     PARA DESALOCAR UM VETOR DA MEMÓRIA:
 
-    delete [] nomeVetor;
+    delete [] vetorName;
 
      */
     
