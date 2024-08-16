@@ -9,7 +9,7 @@ using namespace std;
 
 int main() {
     
-    //Declaração de vetor: tipo nameVar[quantidade] = {elem1, elem2, etc};
+    //Declaração de vetor: tipo nameVar[tamanho] = {elem1, elem2, etc};
     int vetor1[5] = {20, 0, 13}; //Na memória ficaria: [20,0,13,0,0], vetores não alocados valor, iniciará com 0.
     int vetor1Size = sizeof(vetor1) / sizeof(vetor1[0]); //Calcula o número de elementos no vetor
 

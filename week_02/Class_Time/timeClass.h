@@ -1,7 +1,7 @@
 #ifndef TIMECLASS_H
 #define TIMECLASS_H
 
-//Criando a estrutura da Classe
+//Criando a estrutura "abstrata" da Classe
 
 class TimeClass
 {

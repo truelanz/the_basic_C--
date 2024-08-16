@@ -4,7 +4,7 @@
 
 using namespace std;
 
-// Criando a Lógica da Classe
+// Criando estrutura "Lógica" da Classe
 
 TimeClass::TimeClass(int hour, int minute, int second) : hour(hour), minute(minute), second(second) {}
 
