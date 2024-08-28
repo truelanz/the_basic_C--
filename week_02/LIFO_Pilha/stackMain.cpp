@@ -15,17 +15,15 @@ int main() {
         cin.get(charactere);
     }
 
-    stackItem = stack.pop();
-    cout << "ITEM: " << stackItem << " removido" << endl;
-
-    stackItem = stack.pop();
-    cout << "ITEM: " << stackItem << " removido" << endl;
-
-    stackItem = stack.pop();
-    cout << "ITEM: " << stackItem << " removido" << endl;
-
-    stackItem = stack.isEmpty();
+    // Deseja remover item da pilha?
+    while(!stack.isEmpty()) {
+        string resp;
+        cout << "Deseja remover um item da Pilha S/N?" << endl;
+        cin >> resp;
+        if(resp == "S") {
+            stackItem = stack.pop();
+            cout << "ITEM: " << stackItem << " removido" << endl;
+        } else { break; }
+    }
     
-    cout << endl;
-
 }

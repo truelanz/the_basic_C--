@@ -1,22 +1,22 @@
-#include "stack_itemType.h"
+#include "stack_nodeType.h"
 
 //Tamanho máximo do vetor
 const int MAX_ITEMS = 100;
 
-class StackClass
+class Stack
 {
 private:
-    int length;
-    ItemType* structure; //ItemType - tipo genérico criado na classo stack_itemType.h
+    NodeType* structure; //NodeType - sempre apontará para o "topo" da "pilha"
+
 public:
     //Construtor (new)
-    StackClass(/* args */);
+    Stack(/* args */);
     //Destrutor (delete)
-    ~StackClass();
+    ~Stack();
 
     //Metodos
     bool isEmpty() const;
-    bool isfFull() const;
+    bool isFull() const;
     void print() const;
     void push(ItemType); //adicionar elemento acima da pilha
     ItemType pop(); //remover elemento de cima da pilha
