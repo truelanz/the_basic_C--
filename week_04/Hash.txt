@@ -1,0 +1,47 @@
+
+Utilizamos a tabela Hash quando queremos armazenar uma coleção de dados para depois obter os registros de maneira eficiente.
+
+Hash contém: chave: valor
+              (k  :  v)
+A chave é um identificador único e deve ser vista como um "endereço" para seu valor.
+
+- A chave pode ser de qualquer tipo, mas é necessário uma função que mapeie as chaves em inteiros.
+
+String ->
+Obj    -> 
+int    -> | FUNÇÃO | -> int
+char   ->
+Float  ->
+
+- Seja "h" a função de mapeamento (espalahmento) e "k" a chave,
+o endereço de memória será dado por h(k).
+
+- A função de hash "h" mapeia cada chave em um intervalo de 0 a N-1, onde N é a capacidade do vetor.
+
+- Para ajudar no mapeamento é melhor usar um número primo para 'N'. Isso diminui a chance de ocorrer padrões na distribuição
+de dados.
+
+------
+COLISÕES
+------
+- A presença de colisões ocorre quando duas chaves "key1 e key2" geram hash(key1) = hash(key2) (apontam para o nmesmo endereço de memória.)
+impede que se faça uma inserção imediata de um novo item (key, value) em Array[hash(key)] no arranjo "A".
+
+- Uma ideia para tratar colisões é fazer com que cada endereço Array[i] seja um ponteiro para um lista encadeada.
+hash(key) = key % max_items
+
+- Caso o endereço Array[i] estiver ocupado, podemos tentar colocar o elemento do endereço seguinte de maneira sussetiva:
+ Array[(i+1) % max_items], ex: Array[(i + 1) % 13] - de maneira iterativa.
+
+-------
+TESTE LINEAR
+-------
+- Para retornar um item, também devemos examinar os endereços consecutivos, iniciando em Array[hash(key)], até encontrar a chave especificada.
+se a a função de retornar um item parar em uma posição vazia, quer dizer que o item não existe.
+
+Isso implica em uma mudança na função de deletar, pois caso um item seja deletado antes do item de busca, a função de teste poderia fracassar.
+Então, ao invés de deletar um item, colocaremos uma flah, para sinalizar que aquela posição ainda está "ocupada", mas "disponível". Para isso,
+ao invéz de usar "-1", usaremos "-2" para dizer que o espaço está disponível.
+
+A pesquisa por item podem se tornar lentar no teste linear...
+
