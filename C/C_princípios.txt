@@ -1,0 +1,94 @@
+----------------------
+PROGRAMAS EM C
+----------------------
+Diretivas ao pró-processador
+ - includes (bibliotecas e classes)
+ - Macros
+
+Declarações Globais
+ - Funções
+ - Variáveis
+
+Definições das Funções
+
+Programa Principal
+ main() {
+    <code here>
+    return 0;
+ }
+---------------------
+
+PONTEIRO 
+- Variável que guarda como valor o endereço de memória de uma variável.
+- Ponteiros fornecem meios para funções modificarem seus argumentos.
+    Declaração:
+        <type> *<nameVar>;
+        int *number;
+        int valueNumb = 35;
+        number = &valueNumb; // number recebe como valor o endereço de memória de valueNumb
+
+OPERADOR &
+- ao usar o operador &, a variável de ponteiro assume o valor do endereço de memória da variável indicada:
+- O ponteiro deve ser do mesmo tipo da variável que ele irá apontar.
+        
+ 3 operações são possíveis em ponteiros, as quais são:
+- Atribuição:
+    int x=8, *p1, p2*;
+    p1 = &x;
+    p2 = p1; //Os dois ponteiros vão apontar para o mesmo valor e endereço de "x";
+
+- Aritmética (adição e subtração)
+    int *p, num=1; num2;
+    p = &num; //p recebe como valor o endereço de memória de num;
+    num = *p + 1; // "*p" pega o valor contido no endereço de memória *p e soma com 1;
+    num2 = *&num //num2 recebe como valor o mesmo valor da variável "num";
+
+- Comparação (==, !=)
+
+------------------------
+
+TYPEDEF
+- typedef permite compor (não criar) novos tipos de dados, a partir de tipos pré-existentes.
+    typedef type nameForNewType;
+    typedef char Char_Type;
+Declara com #include nameForNewType.h;
+
+--------------------
+
+STRUCT
+- uma coleção de variáveis organizadas em um único conjunto.
+    struct pessoa {
+        char nome[30];
+        int idade;
+    }
+
+- declarar struct como uma typedef:
+    struct ts {
+        int x;
+        char y;
+    }
+    typedef struct ts MyStruct;
+    MyStruct varName; //Declaração de variável como tipo criado;
+
+- Acessando os dados da struct:
+    MyStruct.x = 10;
+    MyStruct.Y = 'a';
+    int num;
+    num = MyStruct.x;
+ 
+Composisão de struct com outra struct:
+    struct ponto {
+        int x;
+        int y;
+    }
+    struct retanguolo {
+        struct ponto p1;
+        struct ponto p2;
+    }ret; //Nome acessível da struct
+
+    ret.p1.x = 10;
+    ret.p1.y = 10;
+    ret.p2.x = 50;
+    ret.p2.y = 20;
+
+------------------------

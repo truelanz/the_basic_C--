@@ -1,0 +1,40 @@
+--------------------------------
+
+CONTEIRO DE ARVORE
+
+- um conjunto de nós
+- existe um nó raiz "root"
+- contém subárvores - (que é também uma árvore) ligadas ao nó raiz
+- são adequadas para apresentar hierarquia nos dados.
+
+obs: Quando inserções e remoções são frequentes são melhores que vetores ordenados.
+
+termos:
+    - Grau de um nó: número de subárvores desse nó
+    - Nó folha: nó de grau 0
+    - Nó interno: nó de grau maior que 0
+    - Descendentes: nós abaixo de um determinado nó.
+
+Nível e altura de um nó:
+    - Altura de um nó:
+        - folha = 0, acima da folha = 1, acima desses = 2, e assim sucessivamente, é contado da folha para cima.
+    - Altura da árvore é a altura do nó raiz
+    - profundidade de um nó é a distancia percorrida da raiz até o nó (começando com 0)
+    - Árvore binária: árvore que abaixo de cada nó existem no máximo duas subárvores.
+
+---------------------------
+
+ÁRVORE BINÁRIA DE BUSCA
+
+- os nós menores que o nó pai estão à esquerda e os nós maiores que o nó pai à direita;
+
+Remoção - se o nó possui mais de um filho:
+    opção 1: Susussão pelo sucessor lógico antes da remoção - (O SUSSESOR LÓGICO SEMPRE É O ELEMENTO (FOLHA) MAIS À ESQUEDA NA SUBÁVORE DA DIREITA)
+    opção 2: Susessão pelo predecessor lógico antes da remoção - (O PREDECESSOR LÓGICO SEMPRE É O ELEMENTO (FOLHA) MAIS À DIREITA NA SUBÁVORE DA ESQUERDA).
+
+---------------------------
+
+PERCURSOS
+    - Pré-ordem: Visitamos primeiramente o nó raiz, depois os nós da esquerda e por ultimo os da direita sucessivamente.
+    - Pós-ordem: visitamos, primeiramente o nó da esquerda, depois os nós da direita e concluímos com o nó raiz sucessivamente.
+    - In-ordem: visitamos, primeiramente os nós da esquerda, depois o nó raiz, concluímos com os nós da direita sucessivamente.
