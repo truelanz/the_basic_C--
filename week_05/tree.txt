@@ -38,3 +38,12 @@ PERCURSOS
     - Pré-ordem: Visitamos primeiramente o nó raiz, depois os nós da esquerda e por ultimo os da direita sucessivamente.
     - Pós-ordem: visitamos, primeiramente o nó da esquerda, depois os nós da direita e concluímos com o nó raiz sucessivamente.
     - In-ordem: visitamos, primeiramente os nós da esquerda, depois o nó raiz, concluímos com os nós da direita sucessivamente.
+
+
+----------------------------
+
+AVL - Árvores Balanceadas.
+
+- Fator de balanceamento é a diferença de altura entre a subárvore da esquerda e da direita.
+- As árvores AVL devem ficar no intervalo entre -1 e +1;
+    - mais alto para a esquerda (-), mais alto para a direita (+)
